@@ -1,5 +1,5 @@
 # photo-gallery
 
 # team:
-olgaoskina
-Julitta
+1. olgaoskina
+2. Julitta
