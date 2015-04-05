@@ -1,0 +1,195 @@
+/* common styles */
+.html .body {
+    padding: 0;
+    margin: 0;
+    width: 1200px;
+}
+
+h1, h2, h3, p, ul {
+    padding: 0;
+    margin: 0;
+}
+
+.white {
+    background: #ffffff;
+}
+
+.black {
+    background: #1e1e1e;
+}
+
+.bg {
+    background-image: url('../images/index-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.layout-center-wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sign-in-title {
+    color: #bcbcbc;
+}
+
+.sign-in-text {
+    color: #bcbcbc;
+}
+
+/* header styles */
+header {
+    padding: 0;
+    background: #ffffff;
+}
+
+.li-sign-up {
+    padding: 5px 0;
+    list-style-type: none;
+    width: inherit;
+}
+
+.li-sign-up input {
+    padding: 14px 20px;
+    text-align: left;
+    border-radius: 10px;
+    width: inherit;
+}
+
+.width-300 {
+    width: 300px;
+}
+
+.li-sign-up input:last-child {
+    margin-right: 10px;
+}
+
+.left-column {
+    width: 400px;
+    float: left;
+    padding: 30px 100px;
+}
+
+.right-column {
+    width: 400px;
+
+    float: right;
+}
+
+.button {
+    border-radius: 5px;
+    color: #ffffff;
+    font: 16px "Roboto", sans-serif;
+    width: 343px;
+    text-decoration: none;
+    border: none;
+    padding: 14px 20px;
+}
+
+.button:last-child {
+    margin-bottom: 10px;
+}
+
+.green-button {
+    background: #70c153;
+}
+
+.green-button:hover {
+    background: #4b964b;
+}
+
+.green-button:active {
+    background: #356b35;
+}
+
+.logo {
+    float: left;
+    padding: 0 30px;
+    width: 150px;
+}
+
+/* footer styles */
+footer {
+    padding: 0;
+
+    background: #ffffff;
+}
+
+/* footer styles */
+footer {
+    margin-top: 0;
+
+    background: #1e1e1e;
+    color: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+footer .footer-info {
+    width: 250px;
+    float: left;
+
+    font: 10px "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    line-height: 3em;
+}
+
+footer .footer-menu {
+    width: 400px;
+    margin-left: 50px;
+    margin-top: -10px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+footer .footer-menu > a {
+    width: 120px;
+
+    display: inline-block;
+
+    font: 14px "Roboto", sans-serif;
+    color: #a0a0a0;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 2.3em;
+}
+
+footer .footer-menu > a:hover {
+    color: #90db11;
+}
+
+footer .footer-social {
+    width: 170px;
+    float: right;
+    font-size: 0;
+}
+
+footer .btn-social {
+    display: inline-block;
+    padding: 10px 9px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #a0a0a0;
+    background-color: #000000;
+    border-radius: 25px;
+}
+
+footer .btn-social:hover {
+    color: #90db11;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer .copyright p {
+    font: 9px "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    line-height: 5em;
+}
