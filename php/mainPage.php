@@ -3,15 +3,15 @@
     <head>
         <title>Photo Gallery</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/icons.css">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/icons.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic-ext,cyrillic' rel='stylesheet'
               type='text/css'>
     </head>
     <body>
         <header>
             <div class="layout-center-wrapper">
-                    <img class="logo" src="images/logo.png" alt="logo" />
+                <img class="logo" src="../images/logo.png" alt="logo"/>
             </div>
         </header>
         <div class="layout-center-wrapper bg">
@@ -21,20 +21,7 @@
 
                     <p class="sign-in-text"> A little bit about the site </p>
                 </div>
-                <div class="right-column">
-                    <ul class="width-300">
-                        <li class="li-sign-up">
-                            <input title="username" placeholder="Pick a username">
-                        </li>
-                        <li class="li-sign-up">
-                            <input title="email" placeholder="Your email">
-                        </li>
-                        <li class="li-sign-up">
-                            <input title="password" placeholder="Create password">
-                        </li>
-                    </ul>
-                    <button class="button green-button">Sign up for PhotoGallery</button>
-                </div>
+                <?php include "signUp.php"; ?>
             </div>
         </div>
         <footer class="white">
