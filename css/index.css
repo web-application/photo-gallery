@@ -1,8 +1,8 @@
 /* common styles */
-.html .body {
+html body {
     padding: 0;
     margin: 0;
-    width: 1200px;
+    width: auto;
 }
 
 h1, h2, h3, p, ul {
@@ -23,6 +23,13 @@ h1, h2, h3, p, ul {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
+    height: 400px;
+    /*width: 1149px;*/
+}
+
+.right-pointer {
+    padding: 0 230px;
+    height: 350px;
 }
 
 .layout-center-wrapper:after {
@@ -42,13 +49,15 @@ h1, h2, h3, p, ul {
 /* header styles */
 header {
     padding: 0;
-    background: #ffffff;
+    background: #dedede;
+    /*width: 1149px;*/
 }
 
 .li-sign-up {
     padding: 5px 0;
     list-style-type: none;
     width: inherit;
+    margin: 4px;
 }
 
 .li-sign-up input {
@@ -69,13 +78,13 @@ header {
 .left-column {
     width: 400px;
     float: left;
-    padding: 30px 100px;
+    padding: 100px 100px;
 }
 
 .right-column {
     width: 400px;
-
     float: right;
+    padding: 30px 0;
 }
 
 .button {
@@ -86,7 +95,23 @@ header {
     text-decoration: none;
     border: none;
     padding: 14px 20px;
+    margin: 4px;
 }
+
+.small-button {
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    font: 15px "Roboto", sans-serif;
+    float: right;
+    height: 30px;
+    width: 90px;
+    margin: 10px;
+}
+
+/*.href-sign-in {*/
+/**/
+/*}*/
 
 .button:last-child {
     margin-bottom: 10px;
@@ -102,6 +127,18 @@ header {
 
 .green-button:active {
     background: #356b35;
+}
+
+.grey-button {
+    background: #a3a3a3;
+}
+
+.grey-button:hover {
+    background: #828282;
+}
+
+.grey-button:active {
+    background: #585858;
 }
 
 .logo {

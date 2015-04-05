@@ -4,7 +4,6 @@
  *  05 April 2015
  */
 
-// Проверяем, пусты ли переменные логина и id пользователя
 if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
     echo '
     <form action="addCredentials.php" method="post">
@@ -22,8 +21,13 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
             </ul>
             <button type="submit" class="button green-button">Sign up for PhotoGallery</button>
         </div>
-    </form>
-        ';
-
+    </form>';
+} else {
+    echo '
+    <div class="right-column">
+        <a href="">
+            <img class="right-pointer" src="../images/right.png"/>
+        </a>
+    </div>';
 }
 ?>
