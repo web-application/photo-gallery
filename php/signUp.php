@@ -18,8 +18,10 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                 <li class="li-sign-up">
                     <input name="password" type="password" title="password" placeholder="Create password">
                 </li>
+                <li class="li-sign-up">
+                    <button type="submit" class="button green-button">Sign up for PhotoGallery</button>
+                </li>
             </ul>
-            <button type="submit" class="button green-button">Sign up for PhotoGallery</button>
         </div>
     </form>';
 } else {

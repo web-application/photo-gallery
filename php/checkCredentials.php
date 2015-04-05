@@ -1,8 +1,9 @@
 <?php
 /**
  *  Created by olgaoskina
- *  05 April 2015
+ *  06 April 2015
  */
+
 session_start();
 
 include "admin/connect.php";
@@ -15,11 +16,7 @@ if (isset($_POST['password'])) {
     $password = $_POST['password'];
 }
 
-if (isset($_POST['email'])) {
-    $email = $_POST['email'];
-}
-
-if (empty($username) or empty($email) or empty($password)) {
+if (empty($username) or empty($password)) {
     exit ("
     <html>
         <header>
@@ -28,7 +25,7 @@ if (empty($username) or empty($email) or empty($password)) {
         <body>
             <div align='center'>
                 <h3>Вы ввели не всю информацию, вернитесь назад и заполните все поля!</h3>
-                    <a href='index.php'>
+                    <a href='signIn.php'>
                 <b>Назад</b>
                 </a>
                 </h3>
@@ -44,11 +41,7 @@ $password = stripslashes($password);
 $password = htmlspecialchars($password);
 $password = trim($password);
 
-$email = stripslashes($email);
-$email = htmlspecialchars($email);
-$email = trim($email);
-
-$query = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
+$query = "SELECT username, password FROM users WHERE username = '$username' AND password = '$password'";
 if ($dbLink->query($query)) {
     $_SESSION['password'] = $password;
     $_SESSION['username'] = $username;
@@ -62,7 +55,7 @@ if ($dbLink->query($query)) {
         </header>
         <body>
             <div align='center'>
-                <h3>Пользователь с таким логином или e-mail уже существует</h3>
+                <h3>Неверная пара логин-пароль</h3>
                 <a href='index.php'>
                     <b>Назад</b>
                 </a>
