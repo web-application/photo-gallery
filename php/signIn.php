@@ -18,18 +18,7 @@ session_start();
               type='text/css'>
     </head>
     <body>
-        <header>
-            <div class="layout-center-wrapper">
-                <img class="logo" src="../images/logo.png" alt="logo"/>
-                <a href="signIn.php" class="href-sign-in">
-                    <button type="button" class="small-button grey-button">Sign in</button>
-                </a>
-                <a href="index.php" class="href-sign-in">
-                    <button type="button" class="small-button green-button">Sign up</button>
-                </a>
-            </div>
-
-        </header>
+        <?php include "header.php"?>
         <div class="layout-center-wrapper">
             <form action="checkCredentials.php" method="post">
                 <div class="layout-center-wrapper sign-in-center" align="center">
@@ -48,24 +37,7 @@ session_start();
                 </div>
             </form>
         </div>
-        <footer class="white">
-            <div class="layout-center-wrapper">
-                <div class="footer-social">
-                    <a href="http://vk.com"
-                       class="btn-social">
-                        <i class="icon-vk"></i>
-                    </a>
-                    <a href="http://vk.com"
-                       class="btn-social">
-                        <i class="icon-twitter"></i>
-                    </a>
-                    <a href="http://vk.com"
-                       class="btn-social">
-                        <i class="icon-gplus"></i>
-                    </a>
-                </div>
-            </div>
-        </footer>
+        <?php include "footer.php"?>
     </body>
 </html>
 
