@@ -248,3 +248,33 @@ footer .copyright p {
     color: #a0a0a0;
     line-height: 5em;
 }
+
+.user-photo {
+    padding: 50px;
+    background: #ffffff 500px 500px no-repeat;
+    box-shadow: 0 0 20px #000000;
+    margin: 15px;
+}
+
+.photo-with-text {
+    display: inline-block;
+    position: relative;
+}
+
+.photo-with-text span {
+    display: inline-block;
+    font-size: 20px;
+    left: 63px;
+    bottom: 5px;
+    position: absolute;
+}
+
+.photo-with-text h2 {
+    display: inline-block;
+    color: #4b964b;
+}
+
+.photo-with-text h6 {
+    display: inline-block;
+    color: #70c153;
+}

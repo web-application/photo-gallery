@@ -27,8 +27,8 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
 } else {
     echo '
     <div class="right-column">
-        <a href="">
-            <img class="right-pointer" src="../images/right.png"/>
+        <a href="photosPage.php">
+            <img class="right-pointer" src="../images/rightPoint.png"/>
         </a>
     </div>';
 }
