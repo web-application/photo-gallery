@@ -17,7 +17,7 @@ session_start();
               type='text/css'>
     </head>
     <body>
-        <?php include "header.php"?>
+        <?php include "header.php" ?>
         <div class="layout-center-wrapper bg">
             <div id="sign-in">
                 <div class="left-column">
@@ -25,9 +25,13 @@ session_start();
 
                     <p class="sign-in-text"> A little bit about the site </p>
                 </div>
-                <?php include "signUp.php"; ?>
+                <div class="right-column">
+                    <a href="photosPage.php">
+                        <img class="right-pointer" src="../images/rightPoint.png"/>
+                    </a>
+                </div>
             </div>
         </div>
-        <?php include "footer.php";?>
+        <?php include "footer.php"; ?>
     </body>
 </html>

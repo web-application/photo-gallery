@@ -18,7 +18,7 @@ session_start();
               type='text/css'>
     </head>
     <body>
-        <?php include "header.php"?>
+        <?php include "header.php" ?>
         <div class="layout-center-wrapper">
             <form action="checkCredentials.php" method="post">
                 <div class="layout-center-wrapper sign-in-center" align="center">
@@ -32,12 +32,15 @@ session_start();
                         <li class="li-sign-in">
                             <button type="submit" class="button green-button">Sign in</button>
                         </li>
+                        <li class="li-sign-in">
+                            <input type="hidden" name="back_url" value="<?php echo '' . $_SERVER['HTTP_REFERER'] ?>"/>
+                        </li>
                     </ul>
 
                 </div>
             </form>
         </div>
-        <?php include "footer.php"?>
+        <?php include "footer.php" ?>
     </body>
 </html>
 

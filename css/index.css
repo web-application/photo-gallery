@@ -127,10 +127,6 @@ header {
     margin: 10px;
 }
 
-/*.href-sign-in {*/
-/**/
-/*}*/
-
 .button:last-child {
     margin-bottom: 10px;
 }
@@ -264,9 +260,25 @@ footer .copyright p {
 .photo-with-text span {
     display: inline-block;
     font-size: 20px;
-    left: 63px;
-    bottom: 5px;
+    left: 75px;
+    top: 10px;
     position: absolute;
+}
+
+.photo-with-text div {
+    display: inline-block;
+    font-size: 20px;
+    left: 20px;
+    top: 18px;
+    position: absolute;
+}
+
+.photo-with-text p {
+    display: inline-block;
+    left: 30px;
+    bottom: 30px;
+    position: absolute;
+    font: 20px "Roboto", sans-serif;
 }
 
 .photo-with-text h2 {
@@ -277,4 +289,32 @@ footer .copyright p {
 .photo-with-text h6 {
     display: inline-block;
     color: #70c153;
+}
+
+.avatar {
+    float: left;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px 1px #bbb
+}
+
+.avatar-in-image {
+    padding: 5px;
+}
+
+.avatar img {
+    display: block;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.avatar-in-header {
+    float: right;
+    padding: 5px;
+    margin: 0 8px;
 }

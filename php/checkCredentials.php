@@ -6,7 +6,7 @@
 
 session_start();
 
-include "admin/connect.php";
+require_once "admin/connect.php";
 
 if (isset($_POST['username'])) {
     $username = $_POST['username'];
@@ -45,7 +45,7 @@ $query = "SELECT username, password FROM users WHERE username = '$username' AND 
 if ($dbLink->query($query)) {
     $_SESSION['password'] = $password;
     $_SESSION['username'] = $username;
-    header('Location: http://localhost:63342/photo-gallery/php/index.php');
+    header('Location: ' . $_POST['back_url']);
     exit;
 } else {
     exit ("

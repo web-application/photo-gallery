@@ -19,7 +19,7 @@ session_start();
     <body>
         <?php include "header.php" ?>
         <div align="center">
-                <?php include "showPhotos.php" ?>
+            <?php include "showPhotos.php" ?>
         </div>
         <?php include "footer.php"; ?>
     </body>
