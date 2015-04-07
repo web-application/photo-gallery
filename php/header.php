@@ -31,12 +31,23 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                 <a href="index.php">
                     <img class="logo" src="../images/logo.png" alt="logo"/>
                 </a>
-                <div class="avatar avatar-in-header">
-                    <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                <div id="menu_body">
+                    <ul>
+                        <li>
+                            <div onclick="openMenu(\'sub_menu_1\');return(false)" class="avatar avatar-in-header">
+                                <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                            </div>
+                            <ul id="sub_menu_1">
+                               <li><a href="">View profile</a></li>
+                               <li>
+                                   <a href="exit.php">Exit</a>
+                               </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <a href="exit.php">
-                    <button type="button" class="small-button green-button">Exit</button>
-                </a>
+
             </div>
         </header>';
 }
+

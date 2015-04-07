@@ -318,3 +318,38 @@ footer .copyright p {
     padding: 5px;
     margin: 0 8px;
 }
+
+#menu_body li ul {
+    display: none;
+}
+#menu_body li:hover ul, #menu_body li.over ul {
+    display: block;
+}
+#menu_body {
+    float: right;
+}
+#menu_body a {
+    display: block;
+    width: 200px;
+    height: 27px;
+    padding-left: 15px;
+}
+
+#menu_body ul li {
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+#menu_body ul li a {
+    color: #fff;
+    text-decoration: none;
+    font: 15px "Roboto", sans-serif;
+}
+
+#menu_body ul li a:hover {
+    background:#424242;
+}
+
+#menu_body ul li ul li {
+    background:#7F7F7F;
+}
