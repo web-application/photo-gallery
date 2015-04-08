@@ -292,17 +292,17 @@ footer .copyright p {
 }
 
 .avatar {
-    float: left;
     background: #fff;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #999;
-    border-radius: 50%;
     box-shadow: 0 1px 1px 1px #bbb
 }
 
 .avatar-in-image {
     padding: 5px;
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #999;
 }
 
 .avatar img {
@@ -310,6 +310,9 @@ footer .copyright p {
     width: 100%;
     border: 0;
     margin: 0;
+}
+
+.avatar img.round {
     border-radius: 50%;
 }
 
@@ -317,6 +320,19 @@ footer .copyright p {
     float: right;
     padding: 5px;
     margin: 0 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+
+.avatar-in-profile {
+    float: left;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+    margin-top: 50px;
 }
 
 #menu_body li ul {

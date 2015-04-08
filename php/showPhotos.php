@@ -14,7 +14,7 @@ while ($row = mysqli_fetch_array($res)) {
     echo '
         <div class="photo-with-text">
             <div class="avatar avatar-in-image">
-                <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                <img class="round" src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
             </div>
             <span>
                 <h2>' . $row['username'] . '</h2>

@@ -35,10 +35,10 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                     <ul>
                         <li>
                             <div onclick="openMenu(\'sub_menu_1\');return(false)" class="avatar avatar-in-header">
-                                <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                                <img class="round" src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
                             </div>
                             <ul id="sub_menu_1">
-                               <li><a href="">View profile</a></li>
+                               <li><a href="profile.php">View profile</a></li>
                                <li>
                                    <a href="exit.php">Exit</a>
                                </li>
