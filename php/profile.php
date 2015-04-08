@@ -27,16 +27,18 @@ echo '
             <link href=\'http://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic-ext,cyrillic\'
                   rel=\'stylesheet\'
                   type=\'text/css\'>
+            <script src="../javascript/profileTabbedMenu.js"></script>
         </head>
-        <body>';
+        <body onload="setting()" class="vertical-bg">';
 
 include "header.php";
 echo '
             <div class="avatar-in-profile avatar">
                 <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                <div class="caption">' . $username . '</div>
             </div>';
-
-include "footer.php";
+include "profileTabbedMenu.php";
+//include "footer.php";
 echo '        </body>
     </html>
 ';
