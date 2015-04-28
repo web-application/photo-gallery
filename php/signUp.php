@@ -36,7 +36,7 @@ session_start();
                             <button type="submit" class="button green-button">Sign up for PhotoGallery</button>
                         </li>
                         <li class="li-sign-in">
-                            <input type="hidden" name="back_url" value="<?php $_SERVER['HTTP_REFERER'] ?>"/>
+                            <input type="hidden" name="back_url" value="<?php echo '' . $_SERVER['HTTP_REFERER'] ?>"/>
                         </li>
                     </ul>
 

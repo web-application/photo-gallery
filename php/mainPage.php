@@ -15,29 +15,9 @@ session_start();
         <link rel="stylesheet" type="text/css" href="../css/icons.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic-ext,cyrillic' rel='stylesheet'
               type='text/css'>
-        <script type="text/javascript">
-            var id_menu = ['sub_menu_1'];
-            startList = function allclose() {
-                for (i = 0; i < id_menu.length; i++) {
-                    document.getElementById(id_menu[i]).style.display = "none";
-                }
-            };
-            function openMenu(id) {
-                for (i = 0; i < id_menu.length; i++) {
-                    if (id != id_menu[i]) {
-                        document.getElementById(id_menu[i]).style.display = "none";
-                    }
-                }
-                if (document.getElementById(id).style.display == "block") {
-                    document.getElementById(id).style.display = "none";
-                } else {
-                    document.getElementById(id).style.display = "block";
-                }
-            }
-            window.onload = startList;
-        </script>
+        <script src="../javascript/showMenu.js"></script>
     </head>
-    <body>
+    <body onload="allclose()">
         <?php include "header.php" ?>
         <div class="layout-center-wrapper bg">
             <div id="sign-in">
