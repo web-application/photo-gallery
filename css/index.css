@@ -27,7 +27,7 @@ h1, h2, h3, p, ul {
 }
 
 .right-pointer {
-    padding: 0 230px;
+    padding: 0 10px;
     height: 350px;
 }
 
@@ -100,7 +100,7 @@ header {
 }
 
 .right-column {
-    width: 400px;
+    /*width: 400px;*/
     float: right;
     padding: 30px 0;
 }
@@ -125,6 +125,10 @@ header {
     height: 30px;
     width: 90px;
     margin: 10px;
+}
+
+.float-left {
+    float: left;
 }
 
 .button:last-child {
@@ -199,14 +203,13 @@ footer .footer-menu {
 
 footer .footer-menu > a {
     width: 120px;
-
     display: inline-block;
-
     font: 14px "Roboto", sans-serif;
     color: #a0a0a0;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 2.3em;
+    float: right;
 }
 
 footer .footer-menu > a:hover {
@@ -329,21 +332,39 @@ footer .copyright p {
 .avatar-in-profile {
     float: left;
     padding: 5px;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-left: 100px;
     margin-top: 50px;
+    position: relative;
+}
+
+.caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font: 15px "Roboto", sans-serif;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 95%;
+    margin: 5px;
 }
 
 #menu_body li ul {
     display: none;
 }
+
 #menu_body li:hover ul, #menu_body li.over ul {
     display: block;
 }
+
 #menu_body {
     float: right;
 }
+
 #menu_body a {
     display: block;
     width: 200px;
@@ -363,9 +384,53 @@ footer .copyright p {
 }
 
 #menu_body ul li a:hover {
-    background:#424242;
+    background: #424242;
 }
 
 #menu_body ul li ul li {
-    background:#7F7F7F;
+    background: #7F7F7F;
+}
+
+.right {
+    float: right;
+}
+
+.tab {
+    width: 400px;
+    height: 270px;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    -webkit-border-radius: 0 0 12px 12px;
+    -moz-border-radius: 0 0 12px 12px;
+    display: none;
+}
+
+.wrap_tab {
+    width: 400px;
+    height: 270px;
+    margin-top: 50px;
+    margin-right: 300px;
+}
+
+.vertical-bg {
+    background: url('http://sergey-oganesyan.ru/wp-content/uploads/2014/01/f.jpg');
+}
+
+.myButton {
+    background-color: #007dc1;
+    border-radius: 3px;
+    border: 1px solid #124d77;
+    display: inline-block;
+    color: #ffffff;
+    font: 15px "Roboto", sans-serif;
+    padding: 6px 24px;
+}
+
+.myButton:hover {
+    background-color: #0061a7;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
 }

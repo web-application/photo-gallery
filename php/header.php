@@ -31,16 +31,19 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                 <a href="index.php">
                     <img class="logo" src="../images/logo.png" alt="logo"/>
                 </a>
+                <a href="uploadPhoto.php">
+                    <button type="button" class="button float-left grey-button">Upload Photo</button>
+                </a>
                 <div id="menu_body">
                     <ul>
                         <li>
-                            <div onclick="openMenu(\'sub_menu_1\');return(false)" class="avatar avatar-in-header">
+                            <div onfocus="openMenu(\'sub_menu_1\');return(false)" class="avatar avatar-in-header">
                                 <img class="round" src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
                             </div>
                             <ul id="sub_menu_1">
                                <li><a href="profile.php">View profile</a></li>
                                <li>
-                                   <a href="exit.php">Exit</a>
+                                   <a href="exit.php">Sign out</a>
                                </li>
                             </ul>
                         </li>

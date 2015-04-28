@@ -27,17 +27,35 @@ echo '
             <link href=\'http://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic-ext,cyrillic\'
                   rel=\'stylesheet\'
                   type=\'text/css\'>
+            <script src="../javascript/profileTabbedMenu.js"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <link href="../css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+            <script type="text/javascript" src="../javascript/jquery.js"></script>
+            <script type="text/javascript" src="../javascript/easySlider1.7.js"></script>
+            <script type="text/javascript" src="../javascript/Logger.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#slider").easySlider({
+                    });
+                });
+	        </script>
         </head>
-        <body>';
+        <body onload="setting()" class="vertical-bg">';
 
 include "header.php";
 echo '
+
+        <div class="layout-center-wrapper">
             <div class="avatar-in-profile avatar">
                 <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                <div class="caption">' . $username . '</div>
             </div>';
-
+include "profileTabbedMenu.php";
+echo '</div>';
+include "previewPhotos.php";
 include "footer.php";
-echo '        </body>
-    </html>
+echo '
+    </body>
+</html>
 ';
 ?>
