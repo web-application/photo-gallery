@@ -1,0 +1,15 @@
+.slider ul li, .slider2 ul li {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider_img {
+    width: 400px;
+    height: 400px;
+    /*overflow: hidden;*/
+}
+
+.slider_wrapper {
+    margin: 100px 300px 40px;
+}
