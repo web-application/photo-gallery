@@ -47,7 +47,7 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
                                     <input type="text" name="comment" value="<?php echo '' . $_POST['comment'] ?>" title="comment"/>
                                 </li>
                                 <li class="li-sign-in">
-                                    <button type="submit" class="button green-button">crop!</button>
+                                    <button type="submit" class="width-300 button green-button">crop!</button>
                                 </li>
                                 <li class="li-sign-in">
                                     <input type="hidden" name="back_url"
