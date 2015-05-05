@@ -32,7 +32,7 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                     <img class="logo" src="../images/logo.png" alt="logo"/>
                 </a>
                 <a href="uploadPhoto.php">
-                    <button type="button" class="button float-left grey-button">Upload Photo</button>
+                    <button type="button" class="wight-300 button float-left grey-button">Upload Photo</button>
                 </a>
                 <div id="menu_body">
                     <ul>
