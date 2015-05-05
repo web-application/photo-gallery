@@ -28,7 +28,7 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
         <script type="text/javascript" src="../javascript/cropPhoto.js"></script>
     </head>
     <body>
-        <?php include "header.php"?>
+        <?php include "header.php" ?>
         <div id="container">
             <div id="content">
                 <div id="crop">
@@ -42,6 +42,9 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
                                 <li class="li-sign-in">
                                     <input name="filename" type="hidden" title="filename"
                                            value="<?php echo '' . $uploadedFile ?>"/>
+                                </li>
+                                <li class="li-sign-in">
+                                    <input type="text" name="comment" value="<?php echo '' . $_POST['comment'] ?>" title="comment"/>
                                 </li>
                                 <li class="li-sign-in">
                                     <button type="submit" class="button green-button">crop!</button>
@@ -74,7 +77,7 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
                 </div>
             </div>
         </div>
-        <?php include "footer.php"?>
+        <?php include "footer.php" ?>
     </body>
 </html>
 

@@ -63,11 +63,13 @@ $sImage = uploadImageFile();
 
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
+$comment = $_POST['comment'];
+
 $result = $dbLink->query("SELECT pathToAvatar FROM users WHERE username = '$username' AND password = '$password'");
 $pathToAvatar = $result->fetch_array()[0];
 
 if ($sImage != null) {
-    $query = "INSERT INTO photos (username, pathToPhoto, date, comment, pathToAvatar) VALUES ('$username', '$sImage', NOW(), 'COMMENT CONSTANT', '$pathToAvatar')";
+    $query = "INSERT INTO photos (username, pathToPhoto, date, comment, pathToAvatar) VALUES ('$username', '$sImage', NOW(), '$comment', '$pathToAvatar')";
     if ($dbLink->query($query)) {
         header('Location: ' . 'photosPage.php');
         exit;

@@ -30,6 +30,9 @@ session_start();
                             <input name="filename" type="file" title="filename"/>
                         </li>
                         <li class="li-sign-in">
+                            <input name="comment" type="text" title="comment" placeholder="Enter comment to photo"/>
+                        </li>
+                        <li class="li-sign-in">
                             <button type="submit" class="width-300 button green-button">Upload!</button>
                         </li>
                         <li class="li-sign-in">
