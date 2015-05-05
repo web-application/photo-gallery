@@ -32,7 +32,7 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
         <div id="container">
             <div id="content">
                 <div id="crop">
-                    <img id="mofat" src="<?php echo '' . $uploadedFile ?>" alt="Mo'Fat" width="300"/>
+                    <img id="mofat" src="<?php echo '' . $uploadedFile ?>" alt="Mo'Fat" width="auto"/>
                     <form action="addPhotoToDB.php" method="post" enctype="multipart/form-data">
                         <div class="layout-center-wrapper sign-in-center" align="center">
                             <ul class="width-300">

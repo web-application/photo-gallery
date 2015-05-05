@@ -37,8 +37,7 @@ function uploadImageFile() {
                 @unlink($sTempFileName);
                 return null;
         }
-
-        $smallFile = imagescale($vImg, 300);
+        $smallFile = $vImg;
 
         // create a new true color image
         $vDstImg = @imagecreatetruecolor($iWidth, $iHeight);
