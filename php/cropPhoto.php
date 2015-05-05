@@ -14,7 +14,7 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>StarTrackr!</title>
+        <title>Photo Gallery</title>
 
         <link rel="stylesheet" href="../css/jquery.Jcrop.css" type="text/css" media="screen" charset="utf-8"/>
         <link rel="stylesheet" href="../css/lightbox.css" type="text/css" media="screen" charset="utf-8"/>

@@ -23,6 +23,7 @@ if (empty($username) or empty($email) or empty($password)) {
     exit ("
     <html>
         <header>
+            <title>Photo Gallery</title>
             <meta charset='UTF-8' content=\"text/html\"/>
         </header>
         <body>

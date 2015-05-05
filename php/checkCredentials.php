@@ -51,6 +51,7 @@ if ($dbLink->query($query)) {
     exit ("
     <html>
         <header>
+            <title>Photo Gallery</title>
             <meta charset='UTF-8' content=\"text/html\"/>
         </header>
         <body>
