@@ -30,7 +30,7 @@ session_start();
                             <input name="password" type="password" title="password" placeholder="Enter your password">
                         </li>
                         <li class="li-sign-in">
-                            <button type="submit" class="button green-button">Sign in</button>
+                            <button type="submit" class="width-300 button green-button">Sign in</button>
                         </li>
                         <li class="li-sign-in">
                             <input type="hidden" name="back_url" value="<?php echo '' . $_SERVER['HTTP_REFERER'] ?>"/>
