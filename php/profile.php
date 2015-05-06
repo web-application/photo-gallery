@@ -47,7 +47,9 @@ echo '
 
         <div class="layout-center-wrapper">
             <div class="avatar-in-profile avatar">
-                <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                <a href="changeAvatar.php">
+                    <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                </a>
                 <div class="caption">' . $username . '</div>
             </div>';
 include "profileTabbedMenu.php";
