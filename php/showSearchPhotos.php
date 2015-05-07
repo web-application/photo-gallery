@@ -18,17 +18,20 @@ foreach ($searchQueries as $q) {
         }
         while ($row = mysqli_fetch_array($res)) {
             echo '
-             <div class="photo-with-text">
-                <div class="avatar avatar-in-image">
-                    <img class="round" src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+            <div style="display: inline-block">
+                 <div class="photo-with-text">
+                    <div class="avatar avatar-in-image">
+                        <img class="round" src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
+                    </div>
+                    <span>
+                        <h2>' . $row['username'] . '</h2>
+                        <h6>' . $row['date'] . '</h6>
+                    </span>
+                    <img class="user-photo" width="400" height="400" alt="' . $row['username'] . '"
+                         src="' . $PATH_TO_IMAGES . $row['pathToPhoto'] . '">
+                    <p>' . $row['comment'] . '</p>
                 </div>
-                <span>
-                    <h2>' . $row['username'] . '</h2>
-                    <h6>' . $row['date'] . '</h6>
-                </span>
-                <img class="user-photo" width="400" height="400" alt="' . $row['username'] . '"
-                     src="' . $PATH_TO_IMAGES . $row['pathToPhoto'] . '">
-                <p>' . $row['comment'] . '</p>
+                <p class="note">Найдено по запросу: ' . $q . '</p>
             </div>';
         }
     }

@@ -21,6 +21,7 @@ foreach ($searchQueries as $q) {
                 <div class="avatar-in-profile avatar">
                     <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
                     <div class="caption">' . $row['username'] . '</div>
+                    <p class="note">Найдено по запросу: ' . $q . '</p>
                 </div>
             </div>';
         }

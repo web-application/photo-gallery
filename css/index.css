@@ -432,3 +432,10 @@ footer .copyright p {
     position: relative;
     top: 1px;
 }
+
+.note {
+    color: #7F7F7F;
+    font: 15px "Roboto", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
