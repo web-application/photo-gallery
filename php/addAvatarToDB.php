@@ -1,7 +1,7 @@
 <?php
 /**
  *  Created by olgaoskina
- *  29 April 2015
+ *  07 May 2015
  */
 session_start();
 
@@ -61,18 +61,14 @@ function uploadImageFile() {
 require_once "admin/connect.php";
 
 $sImage = uploadImageFile();
-
 $username = $_SESSION['username'];
-$password = $_SESSION['password'];
-$comment = $_POST['comment'];
-
-$result = $dbLink->query("SELECT pathToAvatar FROM users WHERE username = '$username' AND password = '$password'");
-$pathToAvatar = $result->fetch_array()[0];
 
 if ($sImage != null) {
-    $query = "INSERT INTO photos (username, pathToPhoto, date, comment, pathToAvatar) VALUES ('$username', '$sImage', NOW(), '$comment', '$pathToAvatar')";
-    if ($dbLink->query($query)) {
-        header('Location: ' . 'photosPage.php');
+    $query1 = "UPDATE users SET pathToAvatar='$sImage' WHERE username='$username'";
+
+    $query2 = "UPDATE photos SET pathToAvatar='$sImage' WHERE username='$username'";
+    if ($dbLink->query($query1) && $dbLink->query($query2)) {
+        header('Location: ' . 'profile.php');
         exit;
     } else {
         exit ("

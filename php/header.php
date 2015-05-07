@@ -34,6 +34,10 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                 <a href="uploadPhoto.php">
                     <button type="button" class="wight-300 button float-left grey-button">Upload Photo</button>
                 </a>
+                <form method="post" action="search.php">
+                    <input name="query" placeholder="Site search">
+                    <input type="submit" value="Search">
+                </form>
                 <div id="menu_body">
                     <ul>
                         <li>
@@ -49,7 +53,6 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                         </li>
                     </ul>
                 </div>
-
             </div>
         </header>';
 }

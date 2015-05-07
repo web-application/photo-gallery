@@ -4,7 +4,7 @@
  *  21 April 2015
  */
 session_start();
-$uploadDir = '../user_images/';
+$uploadDir = $_POST["upload_dir"];
 $uploadedFile = $uploadDir . basename($_FILES['filename']['name']);
 move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
 ?>
@@ -33,7 +33,7 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
             <div id="content">
                 <div id="crop">
                     <img id="mofat" src="<?php echo '' . $uploadedFile ?>" alt="Mo'Fat" width="auto"/>
-                    <form action="addPhotoToDB.php" method="post" enctype="multipart/form-data">
+                    <form action="<?php echo '' . $_POST['action'] ?>" method="post" enctype="multipart/form-data">
                         <div class="layout-center-wrapper sign-in-center" align="center">
                             <ul class="width-300">
                                 <li class="li-sign-in">
@@ -44,7 +44,11 @@ move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
                                            value="<?php echo '' . $uploadedFile ?>"/>
                                 </li>
                                 <li class="li-sign-in">
-                                    <input type="text" name="comment" value="<?php echo '' . $_POST['comment'] ?>" title="comment"/>
+                                    <input name="upload_dir" type="hidden" title="upload_dir"
+                                           value="<?php echo '' . $uploadDir ?>"/>
+                                </li>
+                                <li class="li-sign-in">
+                                    <input type="hidden" name="comment" value="<?php echo '' . $_POST['comment'] ?>" title="comment"/>
                                 </li>
                                 <li class="li-sign-in">
                                     <button type="submit" class="width-300 button green-button">crop!</button>

@@ -5,6 +5,8 @@
  */
 ?>
 
+
+<!--TODO: refactor it-->
 <div class="slider_wrapper">
     <div id="slider">
         <ul>

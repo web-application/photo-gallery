@@ -17,7 +17,7 @@ session_start();
               type='text/css'>
         <script src="../javascript/showMenu.js"></script>
     </head>
-    <body onload="allclose()">
+    <body onload="allclose(); setting();">
         <?php include "header.php" ?>
         <div class="layout-center-wrapper bg">
             <div id="sign-in">

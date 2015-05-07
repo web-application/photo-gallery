@@ -1,7 +1,7 @@
 <?php
 /**
  *  Created by olgaoskina
- *  21 April 2015
+ *  07 May 2015
  */
 session_start();
 ?>
@@ -24,22 +24,19 @@ session_start();
                 <div class="layout-center-wrapper sign-in-center" align="center">
                     <ul class="width-300">
                         <li class="li-sign-in">
+                            <input type="hidden" name="action" value="addAvatarToDB.php"/>
+                        </li>
+                        <li class="li-sign-in">
+                            <input type="hidden" name="upload_dir" value="../avatars/"/>
+                        </li>
+                        <li class="li-sign-in">
                             <input type="hidden" name="MAX_FILE_SIZE" value="3000000"/>
-                        </li>
-                        <li class="li-sign-in">
-                            <input type="hidden" name="action" value="addPhotoToDB.php"/>
-                        </li>
-                        <li class="li-sign-in">
-                            <input type="hidden" name="upload_dir" value="../user_images/"/>
                         </li>
                         <li class="li-sign-in">
                             <input name="filename" type="file" title="filename"/>
                         </li>
                         <li class="li-sign-in">
-                            <input name="comment" type="text" title="comment" placeholder="Enter comment to photo"/>
-                        </li>
-                        <li class="li-sign-in">
-                            <button type="submit" class="width-300 button green-button">Upload!</button>
+                            <button type="submit" class="width-300 button green-button">Change avatar!</button>
                         </li>
                         <li class="li-sign-in">
                             <input type="hidden" name="back_url" value="<?php echo '' . $_SERVER['HTTP_REFERER'] ?>"/>
