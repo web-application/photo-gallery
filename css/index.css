@@ -78,9 +78,9 @@ header {
 
 .li-sign-in input {
     border-radius: 10px;
-    padding: 14px 0;
+    padding: 14px 4px;
     text-align: left;
-    width: inherit;
+    width: 292px;
     border-color: black;
     background: #e0e0e0;
 }
@@ -121,7 +121,7 @@ header {
     font: 15px "Roboto", sans-serif;
     float: right;
     height: 30px;
-    width: 90px;
+    width: 110px;
     margin: 10px;
 }
 
@@ -438,4 +438,8 @@ footer .copyright p {
     font: 15px "Roboto", sans-serif;
     margin-top: 10px;
     margin-bottom: 30px;
+}
+
+.form-search {
+    padding: 10px;
 }
