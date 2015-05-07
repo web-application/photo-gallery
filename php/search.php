@@ -32,12 +32,7 @@ if (empty($searchQuery)) {
 $searchQuery = stripslashes($searchQuery);
 $searchQuery = htmlspecialchars($searchQuery);
 $searchQuery = trim($searchQuery);
-
-$queryUsers = "SELECT username, pathToAvatar FROM users WHERE username LIKE '$searchQuery%'";
-$queryPhotosUser = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM photos WHERE username LIKE '$searchQuery%'";
-$queryDate = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM photos WHERE date LIKE '%$searchQuery%'";
-$queryComment = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM photos WHERE comment LIKE '%$searchQuery%'";
-
+$searchQueries = preg_split("[ ]", $searchQuery);
 ?>
 
 <!DOCTYPE html>
