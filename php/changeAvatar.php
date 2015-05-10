@@ -40,7 +40,7 @@ include "checkAuthorizedUser.php";
                             <button type="submit" class="width-300 button green-button">Change avatar!</button>
                         </li>
                         <li class="li-sign-in">
-                            <input type="hidden" name="back_url" value="<?php echo '' . $_SERVER['HTTP_REFERER'] ?>"/>
+                            <?php include "backUrl.php"?>
                         </li>
                     </ul>
                 </div>
