@@ -4,6 +4,7 @@
  *  21 April 2015
  */
 session_start();
+include "checkAuthorizedUser.php";
 $uploadDir = $_POST["upload_dir"];
 $uploadedFile = $uploadDir . basename($_FILES['filename']['name']);
 move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)

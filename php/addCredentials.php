@@ -3,8 +3,8 @@
  *  Created by olgaoskina
  *  05 April 2015
  */
-session_start();
-
+//session_start();
+include "checkUnauthorizedUser.php";
 require_once "admin/connect.php";
 
 if (isset($_POST['username'])) {

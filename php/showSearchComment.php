@@ -4,20 +4,27 @@
  *  07 May 2015
  */
 require_once "admin/connect.php";
-
+include "checkAuthorizedUser.php";
 $isPrinted = false;
 
+$whereClause = "";
 foreach ($searchQueries as $q) {
-    $queryComment = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM photos WHERE comment LIKE '%$q%'";
+    if (strlen($whereClause) > 0) {
+        $whereClause .= " OR ";
+    }
+    $whereClause .= "comment LIKE '%$q%'";
+}
+$queryComment = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM photos WHERE " . $whereClause;
+echo $queryComment;
 
-    $res = $dbLink->query($queryComment);
-    if ($res->num_rows != 0) {
-        if (!$isPrinted) {
-            echo '<h3 align="center">Найденные комментарии</h3>';
-            echo '<div align="center">';
-        }
-        while ($row = mysqli_fetch_array($res)) {
-            echo '
+$res = $dbLink->query($queryComment);
+if ($res->num_rows != 0) {
+    if (!$isPrinted) {
+        echo '<h3 align="center">Найденные комментарии</h3>';
+        echo '<div align="center">';
+    }
+    while ($row = mysqli_fetch_array($res)) {
+        echo '
             <div style="display: inline-block">
                  <div class="photo-with-text">
                     <div class="avatar avatar-in-image">
@@ -31,9 +38,13 @@ foreach ($searchQueries as $q) {
                          src="' . $PATH_TO_IMAGES . $row['pathToPhoto'] . '">
                     <p>' . $row['comment'] . '</p>
                 </div>
-                <p class="note">Найдено по запросу: ' . $q . '</p>
+                <p class="note">Найдено по запросу</p>
             </div>';
-        }
     }
 }
 echo '</div>';
+
+
+
+
+

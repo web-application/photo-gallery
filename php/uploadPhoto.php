@@ -4,6 +4,7 @@
  *  21 April 2015
  */
 session_start();
+include "checkAuthorizedUser.php";
 ?>
 
 <!DOCTYPE html>

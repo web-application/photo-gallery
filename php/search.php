@@ -5,7 +5,7 @@
  */
 
 session_start();
-
+include "checkAuthorizedUser.php";
 require_once "admin/connect.php";
 $PATH_TO_AVATARS = "../avatars/";
 $PATH_TO_IMAGES = "../user_images/";

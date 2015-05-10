@@ -4,7 +4,7 @@
  *  07 May 2015
  */
 session_start();
-
+include "checkAuthorizedUser.php";
 function uploadImageFile() {
 
     $iWidth = (int)$_POST['w'];
