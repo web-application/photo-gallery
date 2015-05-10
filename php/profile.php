@@ -4,13 +4,10 @@
  *  08 April 2015
  */
 session_start();
+include "checkAuthorizedUser.php";
 require_once "admin/connect.php";
 $PATH_TO_AVATARS = "../avatars/";
 
-if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
-    header("Location: index.php");
-    exit;
-}
 $username = $_SESSION['username'];
 $query = "SELECT username, pathToAvatar FROM users WHERE username = '$username'";
 $result = $dbLink->query($query);
@@ -44,7 +41,6 @@ echo '
 
 include "header.php";
 echo '
-
         <div class="layout-center-wrapper">
             <div class="avatar-in-profile avatar">
                 <a href="changeAvatar.php">

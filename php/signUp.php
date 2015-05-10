@@ -5,6 +5,7 @@
  */
 
 session_start();
+include "checkUnauthorizedUser.php";
 ?>
 
 <!DOCTYPE html>

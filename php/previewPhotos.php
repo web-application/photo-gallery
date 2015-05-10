@@ -3,8 +3,8 @@
  *  Created by olgaoskina
  *  09 April 2015
  */
+include "checkAuthorizedUser.php";
 ?>
-
 
 <!--TODO: refactor it-->
 <div class="slider_wrapper">

@@ -4,7 +4,7 @@
  *  07 May 2015
  */
 require_once "admin/connect.php";
-
+include "checkAuthorizedUser.php";
 $isPrinted = false;
 
 foreach ($searchQueries as $q) {

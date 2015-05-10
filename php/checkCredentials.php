@@ -5,7 +5,7 @@
  */
 
 session_start();
-
+include "checkUnauthorizedUser.php";
 require_once "admin/connect.php";
 
 if (isset($_POST['username'])) {

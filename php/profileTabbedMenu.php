@@ -3,6 +3,7 @@
  *  Created by olgaoskina
  *  09 April 2015
  */
+include "checkAuthorizedUser.php";
 ?>
 <div id="wrap" class="wrap_tab right">
     <div>
