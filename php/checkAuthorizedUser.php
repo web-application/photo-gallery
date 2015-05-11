@@ -4,14 +4,20 @@
  *  07 May 2015
  */
 
-//session_start();
-
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
 }
 
 if (isset($_SESSION['password'])) {
     $password = $_SESSION['password'];
+}
+
+if (isset($_COOKIE['username'])) {
+    $username = $_COOKIE['username'];
+}
+
+if (isset($_COOKIE['password'])) {
+    $password = $_COOKIE['password'];
 }
 
 if (empty($username) or empty($password)) {

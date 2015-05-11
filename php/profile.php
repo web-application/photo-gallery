@@ -8,7 +8,6 @@ include "checkAuthorizedUser.php";
 require_once "admin/connect.php";
 $PATH_TO_AVATARS = "../avatars/";
 
-$username = $_SESSION['username'];
 $query = "SELECT username, pathToAvatar FROM users WHERE username = '$username'";
 $result = $dbLink->query($query);
 $row = mysqli_fetch_array($result);

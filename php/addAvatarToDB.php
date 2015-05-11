@@ -65,7 +65,6 @@ $username = $_SESSION['username'];
 
 if ($sImage != null) {
     $query1 = "UPDATE users SET pathToAvatar='$sImage' WHERE username='$username'";
-
     $query2 = "UPDATE photos SET pathToAvatar='$sImage' WHERE username='$username'";
     if ($dbLink->query($query1) && $dbLink->query($query2)) {
         header('Location: ' . 'profile.php');

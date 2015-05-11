@@ -5,7 +5,13 @@
  */
 session_start();
 include "checkAuthorizedUser.php";
-$uploadDir = $_POST["upload_dir"];
+
+if (isset($_POST["upload_dir"])) {
+    $uploadDir = $_POST["upload_dir"];
+} else {
+    $uploadDir = "../user_images";
+}
+
 $uploadedFile = $uploadDir . basename($_FILES['filename']['name']);
 move_uploaded_file($_FILES['filename']['tmp_name'], $uploadedFile)
 ?>

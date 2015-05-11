@@ -53,6 +53,8 @@ $query = "INSERT INTO users (username, password, email) VALUES ('$username', '$p
 if ($dbLink->query($query)) {
     $_SESSION['password'] = $password;
     $_SESSION['username'] = $username;
+    setcookie('password', $password, time() + (30 * 24 * 60 * 60));
+    setcookie('username', $username, time() + (30 * 24 * 60 * 60));
     header('Location: ' . $_POST['back_url']);
     exit;
 } else {

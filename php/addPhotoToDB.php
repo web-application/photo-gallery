@@ -61,10 +61,11 @@ function uploadImageFile() {
 require_once "admin/connect.php";
 
 $sImage = uploadImageFile();
-
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
-$comment = $_POST['comment'];
+if (isset($_POST['comment'])) {
+    $comment = $_POST['comment'];
+} else {
+    $comment = "";
+}
 
 $result = $dbLink->query("SELECT pathToAvatar FROM users WHERE username = '$username' AND password = '$password'");
 $pathToAvatar = $result->fetch_array()[0];

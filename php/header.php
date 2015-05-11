@@ -5,7 +5,24 @@
  */
 require_once "admin/connect.php";
 $PATH_TO_AVATARS = "../avatars/";
-if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
+
+if (isset($_COOKIE['username'])) {
+    $username = $_COOKIE['username'];
+}
+
+if (isset($_COOKIE['password'])) {
+    $password = $_COOKIE['password'];
+}
+
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+}
+
+if (isset($_SESSION['password'])) {
+    $password = $_SESSION['password'];
+}
+
+if (empty($username) or empty($password)) {
     echo '
         <header>
             <div class="layout-center-wrapper">
@@ -21,7 +38,6 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
             </div>
         </header>';
 } else {
-    $username = $_SESSION['username'];
     $query = "SELECT username, pathToAvatar FROM users WHERE username = '$username'";
     $result = $dbLink->query($query);
     $row = mysqli_fetch_array($result);
