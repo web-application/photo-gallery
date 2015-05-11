@@ -18,13 +18,13 @@ $queryUsers = "SELECT username, pathToAvatar FROM users WHERE " . $whereClause;
 $res = $dbLink->query($queryUsers);
 if ($res->num_rows != 0) {
     if (!$isPrinted) {
-        echo '<h3 align="center">Найденные люди</h3>';
+        echo '<h3 class="retrieval-header">Найденные люди</h3>';
         $isPrinted = true;
     }
     while ($row = mysqli_fetch_array($res)) {
         echo '
             <div style="display: inline-block">
-                <div class="avatar-in-profile avatar">
+                <div class="avatar-in-profile small-margin avatar">
                     <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
                     <div class="caption">' . $row['username'] . '</div>
                 </div>

@@ -19,7 +19,7 @@ $queryDate = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM pho
 $res = $dbLink->query($queryDate);
 if ($res->num_rows != 0) {
     if (!$isPrinted) {
-        echo '<h3 align="center">Найденные даты</h3>';
+        echo '<h3 class="retrieval-header">Найденные даты</h3>';
         echo '<div align="center">';
     }
     while ($row = mysqli_fetch_array($res)) {

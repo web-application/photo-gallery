@@ -337,6 +337,10 @@ footer .copyright p {
     position: relative;
 }
 
+.small-margin {
+    margin-top: 10px;
+}
+
 .caption {
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 0;
@@ -442,4 +446,18 @@ footer .copyright p {
 
 .form-search {
     padding: 10px;
+}
+
+.retrieval-header {
+    text-align: center;
+    padding-top: 30px;
+    font: 30px "Roboto", sans-serif;
+    color: #70c153;
+}
+
+.retrieval-header:hover {
+    text-align: center;
+    padding-top: 30px;
+    font: 30px "Roboto", sans-serif;
+    color: #356b35;
 }

@@ -19,7 +19,7 @@ $queryComment = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM 
 $res = $dbLink->query($queryComment);
 if ($res->num_rows != 0) {
     if (!$isPrinted) {
-        echo '<h3 align="center">Найденные комментарии</h3>';
+        echo '<h3 class="retrieval-header">Найденные комментарии</h3>';
         echo '<div align="center">';
     }
     while ($row = mysqli_fetch_array($res)) {
