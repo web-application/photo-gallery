@@ -465,3 +465,15 @@ footer .copyright p {
     font: 30px "Roboto", sans-serif;
     color: #356b35;
 }
+
+.history-action {
+    display: inline-block;
+    font: 16px "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.history-date {
+    display: inline-block;
+    font: 12px "Roboto", sans-serif;
+    color: #7F7F7F;
+}
