@@ -11,11 +11,16 @@ h1, h2, h3, p, ul {
 }
 
 .white {
+    color: #ffffff;
     background: #ffffff;
 }
 
 .black {
     background: #1e1e1e;
+}
+
+.red {
+    color: #d50009;
 }
 
 .bg {
@@ -264,6 +269,7 @@ footer .copyright p {
     left: 75px;
     top: 10px;
     position: absolute;
+    color: #70c153;
 }
 
 .photo-with-text div {
@@ -284,12 +290,11 @@ footer .copyright p {
 
 .photo-with-text h2 {
     display: inline-block;
-    color: #4b964b;
+
 }
 
 .photo-with-text h6 {
     display: inline-block;
-    color: #70c153;
 }
 
 .avatar {
@@ -345,7 +350,6 @@ footer .copyright p {
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 0;
     box-sizing: border-box;
-    color: #fff;
     font: 15px "Roboto", sans-serif;
     left: 0;
     padding: 10px;

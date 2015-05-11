@@ -45,7 +45,7 @@ echo '
                 <a href="changeAvatar.php">
                     <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
                 </a>
-                <div class="caption">' . $username . '</div>
+                <div class="caption white">' . $username . '</div>
             </div>';
 include "profileTabbedMenu.php";
 echo '</div>';

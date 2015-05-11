@@ -30,7 +30,7 @@ if ($res->num_rows != 0) {
                         <img class="round" src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
                     </div>
                     <span>
-                        <h2>' . $row['username'] . '</h2>
+                        <h2 class="red">' . $row['username'] . '</h2>
                         <h6>' . $row['date'] . '</h6>
                     </span>
                     <img class="user-photo" width="400" height="400" alt="' . $row['username'] . '"

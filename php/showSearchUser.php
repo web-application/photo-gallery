@@ -26,7 +26,7 @@ if ($res->num_rows != 0) {
             <div style="display: inline-block">
                 <div class="avatar-in-profile small-margin avatar">
                     <img src="' . $PATH_TO_AVATARS . $row['pathToAvatar'] . '">
-                    <div class="caption">' . $row['username'] . '</div>
+                    <div class="caption red">' . $row['username'] . '</div>
                 </div>
             </div>';
     }
