@@ -15,7 +15,6 @@ foreach ($searchQueries as $q) {
     $whereClause .= "comment LIKE '%$q%'";
 }
 $queryComment = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM photos WHERE " . $whereClause;
-echo $queryComment;
 
 $res = $dbLink->query($queryComment);
 if ($res->num_rows != 0) {
@@ -38,7 +37,6 @@ if ($res->num_rows != 0) {
                          src="' . $PATH_TO_IMAGES . $row['pathToPhoto'] . '">
                     <p>' . $row['comment'] . '</p>
                 </div>
-                <p class="note">Найдено по запросу</p>
             </div>';
     }
 }
