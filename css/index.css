@@ -466,6 +466,10 @@ footer .copyright p {
     color: #356b35;
 }
 
+.history {
+    margin: 5px;
+}
+
 .history-action {
     display: inline-block;
     font: 16px "Roboto", sans-serif;

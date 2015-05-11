@@ -50,7 +50,8 @@ $email = htmlspecialchars($email);
 $email = trim($email);
 
 $query = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
-if ($dbLink->query($query)) {
+$queryHistory = "INSERT INTO history (username, action, date) VALUES ('$username', 'Регистрация на сайте', NOW())";
+if ($dbLink->query($query) && $dbLink->query($queryHistory)) {
     $_SESSION['password'] = $password;
     $_SESSION['username'] = $username;
     setcookie('password', $password, time() + (30 * 24 * 60 * 60));

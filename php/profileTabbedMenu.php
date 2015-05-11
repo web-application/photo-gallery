@@ -27,8 +27,10 @@ $res = $dbLink->query($query);
                 <?php
                 while ($row = mysqli_fetch_array($res)) {
                     echo '
-                    <div class="history-action">' . $row['action'] . '</div>
-                    <div class="history-date">' . $row['date'] . '</div>
+                    <div class="history">
+                        <div class="history-action">' . $row['action'] . '</div>
+                        <div class="history-date">' . $row['date'] . '</div>
+                    </div>
                 ';
                 }
                 ?>

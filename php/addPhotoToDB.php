@@ -72,7 +72,8 @@ $pathToAvatar = $result->fetch_array()[0];
 
 if ($sImage != null) {
     $query = "INSERT INTO photos (username, pathToPhoto, date, comment, pathToAvatar) VALUES ('$username', '$sImage', NOW(), '$comment', '$pathToAvatar')";
-    if ($dbLink->query($query)) {
+    $queryHistory = "INSERT INTO history (username, action, date) VALUES ('$username', 'Добавлена фотография', NOW())";
+    if ($dbLink->query($query) && $dbLink->query($queryHistory)) {
         header('Location: ' . 'photosPage.php');
         exit;
     } else {

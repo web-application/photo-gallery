@@ -66,7 +66,8 @@ $username = $_SESSION['username'];
 if ($sImage != null) {
     $query1 = "UPDATE users SET pathToAvatar='$sImage' WHERE username='$username'";
     $query2 = "UPDATE photos SET pathToAvatar='$sImage' WHERE username='$username'";
-    if ($dbLink->query($query1) && $dbLink->query($query2)) {
+    $queryHistory = "INSERT INTO history (username, action, date) VALUES ('$username', 'Изменен аватар', NOW())";
+    if ($dbLink->query($query1) && $dbLink->query($query2) && $dbLink->query($queryHistory)) {
         header('Location: ' . 'profile.php');
         exit;
     } else {

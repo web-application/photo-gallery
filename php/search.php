@@ -33,6 +33,11 @@ $searchQuery = stripslashes($searchQuery);
 $searchQuery = htmlspecialchars($searchQuery);
 $searchQuery = trim($searchQuery);
 $searchQueries = preg_split("[ ]", $searchQuery);
+
+$action = 'Поиск по запросу: ' . $searchQuery;
+
+$queryHistory = "INSERT INTO history (username, action, date) VALUES ('$username', '$action', NOW())";
+$dbLink->query($queryHistory);
 ?>
 
 <!DOCTYPE html>
