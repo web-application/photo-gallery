@@ -17,13 +17,14 @@ foreach ($searchQueries as $q) {
 $queryDate = "SELECT username, pathToPhoto, date, comment, pathToAvatar FROM photos WHERE " . $whereClause;
 
 $res = $dbLink->query($queryDate);
-if ($res->num_rows != 0) {
-    if (!$isPrinted) {
-        echo '<h3 class="retrieval-header">Найденные даты</h3>';
-        echo '<div align="center">';
-    }
-    while ($row = mysqli_fetch_array($res)) {
-        echo '
+if ($res) {
+    if ($res->num_rows != 0) {
+        if (!$isPrinted) {
+            echo '<h3 class="retrieval-header">Найденные даты</h3>';
+            echo '<div align="center">';
+        }
+        while ($row = mysqli_fetch_array($res)) {
+            echo '
             <div style="display: inline-block">
                  <div class="photo-with-text">
                     <div class="avatar avatar-in-image">
@@ -38,6 +39,7 @@ if ($res->num_rows != 0) {
                     <p>' . $row['comment'] . '</p>
                 </div>
             </div>';
+        }
     }
 }
 echo '</div>';
