@@ -3,7 +3,7 @@
  */
 var current_tab = 1;
 
-var tabName_1 = "Likes";
+var tabName_1 = "Last Photo";
 var tabName_2 = "History";
 
 function setting() {

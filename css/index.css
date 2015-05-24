@@ -481,3 +481,18 @@ footer .copyright p {
     font: 12px "Roboto", sans-serif;
     color: #7F7F7F;
 }
+
+.last-photo {
+    float: right;
+    margin: 10px;
+}
+
+.last-photo-user {
+    display: inline-block;
+}
+
+.last-photo-user p {
+    font: 20px "Roboto", sans-serif;
+    color: #356b35;
+    margin-top: 20px;
+}
