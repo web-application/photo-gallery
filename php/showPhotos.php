@@ -5,7 +5,13 @@
  */
 require_once "admin/connect.php";
 
-$query = "SELECT * FROM photos";
+if (isset($_POST['startFrom'])) {
+    $startFrom = $_POST['startFrom'];
+} else {
+    $startFrom = 1;
+}
+
+$query = "SELECT * FROM photos LIMIT {$startFrom},4";
 $PATH_TO_IMAGES = "../user_images/";
 $PATH_TO_AVATARS = "../avatars/";
 

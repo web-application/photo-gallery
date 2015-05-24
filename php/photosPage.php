@@ -15,10 +15,16 @@ session_start();
         <link rel="stylesheet" type="text/css" href="../css/icons.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic-ext,cyrillic' rel='stylesheet'
               type='text/css'>
+        <script type="text/javascript" src="../javascript/Logger.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="../javascript/jquery.js"></script>
+        <script type="text/javascript" src="../javascript/loadPhotos.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
     </head>
-    <body>
+    <body onload="ajaxLoader();">
         <?php include "header.php" ?>
-        <div align="center">
+        <div align="center" id="photos">
             <?php include "showPhotos.php" ?>
         </div>
         <?php include "footer.php"; ?>
